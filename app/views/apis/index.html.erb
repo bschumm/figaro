@@ -1,0 +1,27 @@
+<h1>Listing apis</h1>
+
+<table>
+  <tr>
+    <th>Version</th>
+    <th>Name</th>
+    <th>Desc</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @apis.each do |api| %>
+  <tr>
+    <td><%= api.version %></td>
+    <td><%= api.name %></td>
+    <td><%= api.desc %></td>
+    <td><%= link_to 'Show', api %></td>
+    <td><%= link_to 'Edit', edit_api_path(api) %></td>
+    <td><%= link_to 'Destroy', api, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Api', new_api_path %>
