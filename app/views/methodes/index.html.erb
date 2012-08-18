@@ -1,0 +1,25 @@
+<h1>Listing methodes</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Desc</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @methodes.each do |methode| %>
+  <tr>
+    <td><%= methode.name %></td>
+    <td><%= methode.desc %></td>
+    <td><%= link_to 'Show', methode %></td>
+    <td><%= link_to 'Edit', edit_methode_path(methode) %></td>
+    <td><%= link_to 'Destroy', methode, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Methode', new_methode_path %>

@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @methode.name %>
+</p>
+
+<p>
+  <b>Desc:</b>
+  <%= @methode.desc %>
+</p>
+
+
+<%= link_to 'Edit', edit_methode_path(@methode) %> |
+<%= link_to 'Back', methodes_path %>
