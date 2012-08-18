@@ -1,5 +1,12 @@
 Figaro::Application.routes.draw do
+  resources :resources
+
   resources :apis
+  
+  get 'api' => 'apis#index'
+  get 'api/:apiversion' => 'apis#index'
+  get 'api/:apiversion/:ressource' => 'apis#index'
+  post 'api/:apiversion/:ressource' => 'apis#index'
 
   resources :users
 
@@ -52,7 +59,7 @@ Figaro::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'home#index'
+  root :to => 'frapi#index'
 
   # See how all your routes lay out with "rake routes"
 
